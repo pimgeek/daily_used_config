@@ -16,6 +16,10 @@ margin: 10px !important;
 background-color: rgba(255,204,68,0.54) !important;
 }
 
+.Document-rootNode > .Node > .Node-self > .Node-contentContainer, .Document-rootNode > .Node > .Node-self > .Node-noteContainer {
+padding-left:12px !important;
+}
+
 .Node-self {
 padding-top:5px !important;
 padding-bottom:8px !important;
