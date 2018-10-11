@@ -2,7 +2,7 @@
 // Dynalist Pro 用户可使用 Custom CSS 功能载入
 
 .DocumentContainer {
-background: url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg) no-repeat center center fixed !important;
+background: url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim/.jpg) no-repeat center center fixed !important;
 -webkit-background-size: cover !important;
 -moz-background-size: cover !important;
 -o-background-size: cover !important;
@@ -13,11 +13,18 @@ background-size: cover !important;
 box-shadow: 1px 1px 1px 1px #777777 !important;
 border-radius: 8px !important;
 margin: 10px !important;
-background-color: rgba(255,204,68,0.54) !important;
+background-color: rgba(255,200,0,0.56) !important;
+filter: brightness(87%) contrast(127%);
+-webkit-filter: brightness(87%) contrast(127%);
 }
 
 .Document-rootNode > .Node > .Node-self > .Node-contentContainer, .Document-rootNode > .Node > .Node-self > .Node-noteContainer {
 padding-left:12px !important;
+}
+
+.Node-contentContainer {
+border-bottom:1px dotted #222222 !important;
+border-radius:0px !important;
 }
 
 .Node-self {
@@ -31,7 +38,7 @@ background-color: rgba(255,255,245,0.5) !important;
 }
 
 .Node-children {
-border-left: 1px dashed gray !important;
+border-left: 0px dashed gray !important;
 }
 
 .node-line.Node-contentContainer, .Node-content.node-line.needsclick {
