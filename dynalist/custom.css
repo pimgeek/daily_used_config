@@ -1,7 +1,3 @@
-/* 可用于 PC 桌面浏览器的，用于优化 Dyanlist 界面效果的 custom.css
- * Dynalist Pro 用户可使用 Custom CSS 功能载入 
-*/
-
 /* 设置背景图形，并使之居中、固定、保持比例等 */
 .DocumentContainer {
 background:url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim/.jpg) no-repeat center center fixed !important;
@@ -33,7 +29,7 @@ background-color:rgba(255,200,0,0.56);
 filter:brightness(87%) contrast(127%);
 -webkit-filter:brightness(87%) contrast(127%);
 }
-.Node.is-selected .Node-self {
+.Node.is-selected .Node-self, .GlobalSearchPage-resultsInDocument .Node-self {
 filter:none;
 -webkit-filter:none;
 }
