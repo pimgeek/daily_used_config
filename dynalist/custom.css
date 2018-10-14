@@ -9,11 +9,17 @@ background: url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim
 background-size: cover !important;
 }
 
-.Document, .Node {
+.Document {
+border-radius: 8px !important;
+margin: 10px !important;
+background-color: rgba(255,255,85,0.5) !important;
+}
+
+.Node {
 box-shadow: 1px 1px 1px 1px #777777 !important;
 border-radius: 8px !important;
 margin: 10px !important;
-background-color: rgba(255,200,0,0.56) !important;
+background-color: rgba(255,200,0,0.56);
 filter: brightness(87%) contrast(127%);
 -webkit-filter: brightness(87%) contrast(127%);
 }
