@@ -1,6 +1,8 @@
-// 可用于 PC 桌面浏览器的，用于优化 Dyanlist 界面效果的 custom.css
-// Dynalist Pro 用户可使用 Custom CSS 功能载入
+/* 可用于 PC 桌面浏览器的，用于优化 Dyanlist 界面效果的 custom.css
+ * Dynalist Pro 用户可使用 Custom CSS 功能载入 
+*/
 
+/* 设置背景图形，并使之居中、固定、保持比例等 */
 .DocumentContainer {
 background: url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim/.jpg) no-repeat center center fixed !important;
 -webkit-background-size: cover !important;
@@ -8,13 +10,17 @@ background: url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim
 -o-background-size: cover !important;
 background-size: cover !important;
 }
-
+/* 设置文档区域边框和背景色 */
 .Document {
 border-radius: 8px !important;
 margin: 10px !important;
 background-color: rgba(255,255,85,0.5) !important;
 }
-
+/* 设置顶层节点文字左侧的边界内空白填充 */
+.Document-rootNode > .Node > .Node-self > .Node-contentContainer, .Document-rootNode > .Node > .Node-self > .Node-noteContainer {
+padding-left:12px !important;
+}
+/* 设置一般节点区域的边框和背景色（嵌套时有叠加效果） */
 .Node {
 box-shadow: 1px 1px 1px 1px #777777 !important;
 border-radius: 8px !important;
@@ -23,21 +29,17 @@ background-color: rgba(255,200,0,0.56);
 filter: brightness(87%) contrast(127%);
 -webkit-filter: brightness(87%) contrast(127%);
 }
-
-.Document-rootNode > .Node > .Node-self > .Node-contentContainer, .Document-rootNode > .Node > .Node-self > .Node-noteContainer {
-padding-left:12px !important;
-}
-
+/* 设置一般节点标题的下划线 */
 .Node-contentContainer {
 border-bottom:1px dotted #222222 !important;
 border-radius:0px !important;
 }
-
+/* 设置一般节点边界内部内容块的空白填充等 */
 .Node-self {
 padding-top:5px !important;
 padding-bottom:8px !important;
 }
-
+/* 设置当前正在编辑的节点的标题和正文背景色为高亮显示 */
 .Node:not(.is-currentRoot) .Node-self:not(.is-contentRendered), .Node:not(.is-currentRoot) .Node-self:not(.is-noteRendered) {
 background-clip: content-box !important;
 background-color: rgba(255,255,245,0.5) !important;
@@ -55,7 +57,7 @@ padding-bottom: 3px !important;
 height:24px !important;
 line-height: 180% !important;
 }
-
+/* 设置标签内容的背景色 */
 .node-tag {
 border: 1px dotted silver !important;
 border-radius: 5px !important;
@@ -64,9 +66,9 @@ padding-left: 5px !important;
 padding-right: 5px !important;
 text-decoration: none !important;
 }
-
+/* 设置图片内容的宽度、边界和空白填充等 */
 .node-displayed-image {
 border-radius: 10px !important;
 padding: 5px !important;
-max-width: 100%;
+max-width: 98%;
 }
