@@ -54,6 +54,8 @@ filter:none;
 .Node:not(.is-currentRoot) .Node-self:not(.is-contentRendered), .Node:not(.is-currentRoot) .Node-self:not(.is-noteRendered) {
 background-clip:content-box !important;
 background-color:rgba(255,255,245,0.5) !important;
+filter:none;
+-webkit-filter:none;
 }
 
 .Node-children {
