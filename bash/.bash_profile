@@ -1,3 +1,6 @@
+# 设置默认访问属性
+umask 022
+
 # 设置默认编辑器
 export EDITOR=vim
 
