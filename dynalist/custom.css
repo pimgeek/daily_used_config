@@ -70,6 +70,11 @@ padding-bottom:3px !important;
 height:24px !important;
 line-height:180% !important;
 }
+/* 取消 inline code 的 vertical-align 属性 */
+.node-inline-code {
+margin-top:12px;
+vertical-align:baseline !important;
+}
 /* 设置标签内容的背景色 */
 .node-tag {
 border:1px dotted silver !important;
