@@ -21,7 +21,15 @@ set paste
 " 始终显示当光标的当前位置
 set ruler
 
-"" 设定命令区域的高度
+" 根据文件类型设置 tab 宽度
+set shiftwidth=0
+
+autocmd Filetype html setlocal tabstop=2 softtabstop=2 noexpandtab
+autocmd Filetype css setlocal tabstop=2 softtabstop=2 noexpandtab
+autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 noexpandtab
+autocmd Filetype python setlocal tabstop=4 softtabstop=4 noexpandtab
+
+" 设定命令区域的高度
 set cmdheight=2
 
 " 让回退键（Backspace）正常工作
