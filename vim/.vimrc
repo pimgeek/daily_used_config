@@ -92,4 +92,14 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" 为 plug.vim 指定插件目录
+" - 如果使用 Neovim: ~/.local/share/nvim/plugged
+" - 别使用 Vim 的保留目录，比如 'plugin'，使用 'plugged' 即可
+call plug#begin('~/.vim/plugged')
 
+" 指定插件名称时，一定要使用 ' 单引号！
+
+Plug 'vim-syntastic/syntastic'
+
+" 初始化 plug.vim 插件系统
+call plug#end()
