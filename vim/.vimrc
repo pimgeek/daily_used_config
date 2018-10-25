@@ -102,7 +102,8 @@ call plug#begin('~/.vim/plugged')
 
 " 指定插件名称时，一定要使用 ' 单引号！
 
-Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'		" 用于各种代码的语法检查
+Plug 'mattn/emmet-vim'			" 用于加速 html 代码开发
 
 " 初始化 plug.vim 插件系统
 call plug#end()
