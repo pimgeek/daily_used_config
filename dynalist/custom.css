@@ -8,9 +8,10 @@ background-size:cover;
 }
 /* 设置文档区域边框和背景色 */
 .Document {
+background-color:rgb(255,255,85);
+background-color:rgba(255,255,85,0.5);
 border-radius:8px;
 margin:10px;
-background-color:rgba(255,255,85,0.5);
 }
 /* 设置顶层节点文字不模糊 */
 .Document-rootNode > .Node > .Node-self, .Document-rootNode > .Node > .Node-self {
@@ -22,12 +23,13 @@ padding-left:12px;
 }
 /* 设置一般节点区域的边框和背景色（嵌套时有叠加效果） */
 .Node {
-box-shadow:1px 1px 1px 1px #777777;
-border-radius:8px;
-margin:10px;
+background-color:rgb(255,200,0);
 background-color:rgba(255,200,0,0.56);
-filter:brightness(87%) contrast(127%);
+border-radius:8px;
+box-shadow:1px 1px 1px 1px #777777;
 -webkit-filter:brightness(87%) contrast(127%);
+filter:brightness(87%) contrast(127%);
+margin:10px;
 }
 .Node.is-selected .Node-self, .GlobalSearchPage-resultsInDocument .Node-self {
 filter:none;
@@ -36,14 +38,14 @@ filter:none;
 /* 设置一般节点标题的下划线 */
 .Node-contentContainer {
 border-bottom:1px dotted #222222;
-border-radius:0px;
+border-radius:0;
 }
 /* 设置一般节点边界内部内容块的空白填充等 */
 .Node-self {
-padding-top:5px;
-padding-bottom:8px;
-filter:blur(4px);
 -webkit-filter:blur(4px);
+filter:blur(4px);
+padding-bottom:8px;
+padding-top:5px;
 }
 .Node-self.is-hovering {
 filter:none;
@@ -53,16 +55,17 @@ filter:none;
 /* 设置当前正在编辑的节点的标题和正文背景色为高亮显示 */
 .Node:not(.is-currentRoot) .Node-self:not(.is-contentRendered), .Node:not(.is-currentRoot) .Node-self:not(.is-noteRendered) {
 background-clip:content-box;
+background-color:rgb(255,255,245);
 background-color:rgba(255,255,245,0.5);
 filter:none;
 -webkit-filter:none;
 }
 
 .Node-children {
-border-left:0px dashed gray;
+border-left:0 dashed gray;
 }
 
-.node-line.Node-contentContainer, .Node-content.node-line.needsclick {
+.node-line.Node-contentContainer,.Node-content.node-line.needsclick {
 padding-bottom:3px;
 }
 
@@ -77,9 +80,9 @@ vertical-align:baseline;
 }
 /* 设置标签内容的背景色 */
 .node-tag {
+background-color:#eeffff;
 border:1px dotted silver;
 border-radius:5px;
-background-color:#eeffff;
 padding-left:5px;
 padding-right:5px;
 text-decoration:none;
@@ -87,6 +90,6 @@ text-decoration:none;
 /* 设置图片内容的宽度、边界和空白填充等 */
 .node-displayed-image {
 border-radius:10px;
-padding:5px;
 max-width:98%;
+padding:5px;
 }
