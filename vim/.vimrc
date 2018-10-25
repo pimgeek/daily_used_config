@@ -92,7 +92,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" 为 plug.vim 指定插件目录
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 第三方插件设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 为 plug.vim 插件管理器指定插件目录
 " - 如果使用 Neovim: ~/.local/share/nvim/plugged
 " - 别使用 Vim 的保留目录，比如 'plugin'，使用 'plugged' 即可
 call plug#begin('~/.vim/plugged')
@@ -103,3 +106,14 @@ Plug 'vim-syntastic/syntastic'
 
 " 初始化 plug.vim 插件系统
 call plug#end()
+
+" 设置 syntastic 插件的默认选项
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_css_checkers = ['csslint']
