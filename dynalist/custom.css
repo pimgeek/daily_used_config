@@ -1,3 +1,21 @@
+/* 增加专门针对 iPhone6P 的特殊样式 */
+/* （不使用模糊化、不使用明度和对比度、不使用阴影，只使用透明色） */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+.Node-self {
+-webkit-filter:none !important;
+filter:none !important;
+}
+.Node {
+background-color:rgb(255,200,0);
+background-color:rgba(255,200,0,0.56) !important;
+border:1px dotted gray !important;
+box-shadow:none !important;
+filter:none !important;
+-webkit-filter:none !important;
+}
+}
+
 /* 设置背景图形，并使之居中、固定、保持比例等 */
 .DocumentContainer {
 background:url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim/.jpg) no-repeat center center fixed;
@@ -89,3 +107,4 @@ border-radius:10px;
 max-width:98%;
 padding:5px;
 }
+
