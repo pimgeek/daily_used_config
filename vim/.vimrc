@@ -102,6 +102,7 @@ call plug#begin('~/.vim/plugged')
 
 " 指定插件名称时，一定要使用 ' 单引号！
 
+Plug 'wesQ3/vim-windowswap'		" 用于在 vim 中对已经打开的窗口交换位置
 Plug 'vim-syntastic/syntastic'		" 用于各种代码的语法检查
 Plug 'mattn/emmet-vim'			" 用于加速 html 代码开发
 
