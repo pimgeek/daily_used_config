@@ -1,3 +1,21 @@
+/* 增加专门针对 iPhone6P 的特殊样式 */
+/* （不使用模糊化、不使用明度和对比度、不使用阴影，只使用透明色） */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+.Node-self {
+-webkit-filter:none !important;
+filter:none !important;
+}
+.Node {
+background-color:rgb(255,200,0);
+background-color:rgba(255,200,0,0.56) !important;
+border:1px dotted gray !important;
+box-shadow:none !important;
+filter:none !important;
+-webkit-filter:none !important;
+}
+}
+
 /* 设置背景图形，并使之居中、固定、保持比例等 */
 .DocumentContainer {
 background:url(https://pimfans.hintsnet.com/qna/181007/bcHCk3FKJd.jpg?imageslim/.jpg) no-repeat center center fixed;
@@ -8,8 +26,6 @@ background-size:cover;
 }
 /* 设置文档区域边框和背景色 */
 .Document {
-background-color:rgb(255,255,85);
-background-color:rgba(255,255,85,0.5);
 border-radius:8px;
 margin:10px;
 }
@@ -24,11 +40,10 @@ padding-left:12px;
 /* 设置一般节点区域的边框和背景色（嵌套时有叠加效果） */
 .Node {
 background-color:rgb(255,200,0);
-background-color:rgba(255,200,0,0.56);
 border-radius:8px;
 box-shadow:1px 1px 1px 1px #777777;
--webkit-filter:brightness(87%) contrast(127%);
-filter:brightness(87%) contrast(127%);
+-webkit-filter:brightness(85%) contrast(135%);
+filter:brightness(85%) contrast(135%);
 margin:10px;
 }
 .Node.is-selected .Node-self, .GlobalSearchPage-resultsInDocument .Node-self {
@@ -56,7 +71,6 @@ filter:none;
 .Node:not(.is-currentRoot) .Node-self:not(.is-contentRendered), .Node:not(.is-currentRoot) .Node-self:not(.is-noteRendered) {
 background-clip:content-box;
 background-color:rgb(255,255,245);
-background-color:rgba(255,255,245,0.5);
 filter:none;
 -webkit-filter:none;
 }
@@ -93,3 +107,4 @@ border-radius:10px;
 max-width:98%;
 padding:5px;
 }
+
