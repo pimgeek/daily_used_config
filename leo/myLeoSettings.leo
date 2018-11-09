@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
 <v t="pimgeek.20180801052332.1"><vh>Settings README</vh></v>
-<v t="pimgeek.20180801052332.207" a="E"><vh>@settings</vh>
+<v t="pimgeek.20180801052332.207"><vh>@settings</vh>
 <v t="pimgeek.20180801052841.1"><vh>Appearance (change these first)</vh>
 <v t="pimgeek.20180801052841.2"><vh>Qt Gui settings</vh>
 <v t="pimgeek.20180801052841.3"><vh>Colors</vh>
+<v t="pimgeek.20181109180843.1"><vh>@color big-text-warning-bg = blue</vh></v>
 <v t="pimgeek.20180801052841.4"><vh>Body pane colors</vh>
 <v t="pimgeek.20180801052841.5"><vh>@color body-bg = white</vh></v>
 <v t="pimgeek.20180801052841.6"><vh>@color body-fg = black</vh></v>
@@ -110,10 +108,10 @@
 </v>
 <v t="pimgeek.20180801052841.79"><vh>Fonts</vh>
 <v t="pimgeek.20180801052841.80"><vh>Basic Fonts (change these first)</vh>
-<v t="pimgeek.20180801052841.81"><vh>@string font-family = Inziu IosevkaCC Slab SC</vh></v>
-<v t="pimgeek.20180801052841.82"><vh>@string font-size = 14pt </vh></v>
-<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 12pt</vh></v>
-<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 10pt</vh></v>
+<v t="pimgeek.20180801052841.81"><vh>@string font-family = 等距更纱黑体 T SC</vh></v>
+<v t="pimgeek.20180801052841.82"><vh>@string font-size = 12pt</vh></v>
+<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 10pt</vh></v>
+<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 9pt</vh></v>
 <v t="pimgeek.20180801052841.85"><vh>@string font-style = normal</vh></v>
 <v t="pimgeek.20180801052841.86"><vh>@string font-weight = normal</vh></v>
 </v>
@@ -160,7 +158,7 @@
 <v t="pimgeek.20180801052841.122"><vh>@string minibuffer-font-style = @font-style</vh></v>
 </v>
 <v t="pimgeek.20180801052841.123"><vh>Outline pane fonts</vh>
-<v t="pimgeek.20180801052841.124" a="E"><vh>Basic outline fonts</vh>
+<v t="pimgeek.20180801052841.124"><vh>Basic outline fonts</vh>
 <v t="pimgeek.20180801052841.125"><vh>@string tree-font-family = @font-family</vh></v>
 <v t="pimgeek.20180801052841.126"><vh>@string tree-font-size = @font-size</vh></v>
 <v t="pimgeek.20180801052841.127"><vh>@string tree-font-weight = @font-weight</vh></v>
@@ -295,7 +293,7 @@
 </v>
 </v>
 <v t="pimgeek.20180801052332.208"><vh>@enabled-plugins</vh></v>
-<v t="pimgeek.20180801052332.209" a="E"><vh>@keys</vh>
+<v t="pimgeek.20180801052332.209"><vh>@keys</vh>
 <v t="pimgeek.20180801052332.210"><vh>@shortcuts</vh></v>
 </v>
 </v>
@@ -329,7 +327,7 @@ free_layout.py
 contextmenu.py
     # This is required by the vim.py and xemacs.py plugins.
 leo_to_html.py
-livecode.py
+# livecode.py
 mod_scripting.py
 nav_qt.py
 nodetags.py
@@ -826,15 +824,14 @@ QLabel#minibufferLabel {
 
 /* ----- Minibuffer ----- */
 
-QLineEdit#lineEdit[style_class ~= 'minibuffer_warning'] {
+QLineEdit#lineEdit[style_class = 'minibuffer_warning'] {
     background-color: @minibuffer_warning_color;
 }
 
-QLineEdit#lineEdit[style_class ~= 'minibuffer_error'] {
+QLineEdit#lineEdit[style_class = 'minibuffer_error'] {
     color: @minibuffer_error_color;
     background-color: @minibuffer_warning_color;
-}
-</t>
+}</t>
 <t tx="pimgeek.20180801052841.217">/* ========== Outline pane ========== */
 
 QTreeWidget {
@@ -917,7 +914,7 @@ QTreeView::branch:open:has-children{
     text-decoration:    @bookmarks_base_decoration;
 }
 
-#show_bookmarks QPushButton[style_class~='bookmark_children'] {
+#show_bookmarks QPushButton[style_class='bookmark_children'] {
     color:              @bookmarks_children_color;
     font-family:        @bookmarks_children_family;
     font-size:          @bookmarks_children_size;
@@ -925,7 +922,7 @@ QTreeView::branch:open:has-children{
     text-decoration:    @bookmarks_children_decoration;
 }
 
-#show_bookmarks QPushButton[style_class~='bookmark_expanded'] {
+#show_bookmarks QPushButton[style_class='bookmark_expanded'] {
     font-size:          @bookmarks_expanded_size;
     color:              @bookmarks_expanded_color;
     font-style:         @bookmarks_expanded_style;
@@ -933,14 +930,13 @@ QTreeView::branch:open:has-children{
     text-decoration:    @bookmarks_expanded_decoration;
 }
 
-#show_bookmarks QPushButton[style_class~='bookmark_current'] {
+#show_bookmarks QPushButton[style_class='bookmark_current'] {
     font-size:          @bookmarks_current_size;
     color:              @bookmarks_current_color;
     font-style:         @bookmarks_expanded_style;
     font-weight:        @bookmarks_current_weight;
     text-decoration:    @bookmarks_current_decoration;
-}
-</t>
+}</t>
 <t tx="pimgeek.20180801052841.22"></t>
 <t tx="pimgeek.20180801052841.220">/* ========== screencast.py plugin========== */
 
@@ -998,30 +994,28 @@ QLineEdit#status1, QLineEdit#status2 {
     font-style:         @status-font-style;
 }
 
-QLineEdit#status1[style_class ~= 'info'], QLineEdit#status2[style_class ~= 'info'] {
+QLineEdit#status1[style_class = 'info'], QLineEdit#status2[style_class = 'info'] {
     background-color:   @find-found-bg;
     color:              @find-found-fg;
 }
 
-QLineEdit#status1[style_class ~= 'fail'], QLineEdit#status2[style_class ~= 'fail'] {
+QLineEdit#status1[style_class = 'fail'], QLineEdit#status2[style_class = 'fail'] {
     background-color:   @find-not-found-bg;
     color:              @find-not-found-fg;
-}
-</t>
+}</t>
 <t tx="pimgeek.20180801052841.226">/* Vim mode borders... */
 
-QTextEdit#richTextEdit[vim_state~="vim_normal"] {
+QTextEdit#richTextEdit[vim_state="vim_normal"] {
   border: @vim-mode-normal-border;
 }
 
-QTextEdit#richTextEdit[vim_state~="vim_insert"] {
+QTextEdit#richTextEdit[vim_state="vim_insert"] {
   border: @vim-mode-insert-border;
 }
 
-QTextEdit#richTextEdit[vim_state~="vim_visual"] {
+QTextEdit#richTextEdit[vim_state="vim_visual"] {
   border: @vim-mode-visual-border;
-}
-</t>
+}</t>
 <t tx="pimgeek.20180801052841.227">/* ========== Widgets ========== */
 
 /* ----- Destroys other background colors!
@@ -1191,5 +1185,6 @@ Don't change these unless you are aware of the consequences</t>
 <t tx="pimgeek.20180801052841.97"> @font-style</t>
 <t tx="pimgeek.20180801052841.98"></t>
 <t tx="pimgeek.20180801052841.99"></t>
+<t tx="pimgeek.20181109180843.1"></t>
 </tnodes>
 </leo_file>
