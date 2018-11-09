@@ -292,6 +292,10 @@
 <v t="pimgeek.20180801052841.229"><vh>@ignore @data qt-gui-user-style-sheet</vh></v>
 </v>
 </v>
+<v t="pimgeek.20181109220325.1"><vh>Behaviors</vh>
+<v t="pimgeek.20181109220429.1"><vh>@bool enable_autocompleter_initially = True</vh></v>
+<v t="pimgeek.20181109220448.1"><vh>@bool enable_calltips_initially = True</vh></v>
+</v>
 <v t="pimgeek.20180801052332.208"><vh>@enabled-plugins</vh></v>
 <v t="pimgeek.20180801052332.209"><vh>@keys</vh>
 <v t="pimgeek.20180801052332.210"><vh>@shortcuts</vh></v>
@@ -1186,5 +1190,16 @@ Don't change these unless you are aware of the consequences</t>
 <t tx="pimgeek.20180801052841.98"></t>
 <t tx="pimgeek.20180801052841.99"></t>
 <t tx="pimgeek.20181109180843.1"></t>
+<t tx="pimgeek.20181109220325.1"></t>
+<t tx="pimgeek.20181109220429.1">True:  enable autocompletion initially.
+False: disable autocomopletion initially.
+
+You can use the enable-autocompleter and disable-autocompleter
+commands to enable or disable autocompletion at any time.
+
+Note: The 'initially' prefix is needed to distinguish this setting from
+enable-autocompleter command. Otherwised they would get 'munged' to the same
+configuration value.</t>
+<t tx="pimgeek.20181109220448.1"></t>
 </tnodes>
 </leo_file>
