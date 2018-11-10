@@ -473,12 +473,65 @@ viewrendered.py
 # zenity_file_dialogs.py
 </t>
 <t tx="pimgeek.20180801052332.209"></t>
-<t tx="pimgeek.20180801052332.210"># You can define keyboard shortcuts here of the form:
+<t tx="pimgeek.20180801052332.210"># 可以在这里以如下格式定义键盘快捷键：
 #
-#    some-command Shift-F5
+# 命令名称 = Shift-F5
 
-edit-headline = F2
-eval = Ctrl-e</t>
+# 预先解绑部分快捷键（防冲突）
+do-nothing                          = Ctrl-b
+do-nothing                          = Ctrl-h
+do-nothing                          = Ctrl-l
+do-nothing                          = Ctrl-Ins
+do-nothing                          = Ctrl-Return
+
+# 通用操作
+focus-to-find                       = Ctrl-h
+redo                                = Ctrl-r
+redo                                = Ctrl-y
+
+# 基础节点操作
+edit-headline               !tree   = F2
+insert-node                 !tree   = Return
+insert-child                !tree   = Ctrl-Return
+move-outline-right          !tree   = Tab
+move-outline-right          !tree   = Ctrl-Right
+move-outline-left           !tree   = Shift-Tab
+move-outline-left           !tree   = Ctrl-Left
+move-outline-up             !tree   = Ctrl-Up
+move-outline-down           !tree   = Ctrl-Down
+hoist                       !tree   = Alt-Shift-Right
+de-hoist                    !tree   = Alt-Shift-Left
+contract-all                !tree   = Alt--                     # 折叠所有节点
+expand-all                  !tree   = Alt-=                     # 展开所有节点
+
+# 高级节点操作
+paste-retaining-clones      !tree   = Ctrl-Shift-l
+
+# 节点高亮操作（tbd）
+
+# 远距离操作
+## 远程发送到 inbox（tbd）
+## 远程移动节点（tbd）
+
+# 界面导航操作
+goto-prev-node                      = Ctrl-Shift-[
+goto-next-node                      = Ctrl-Shift-]
+## 跳转到 inbox（tbd）
+goto-parent                         = Shift-Backspace
+goto-first-visible-node     !tree   = Ctrl-Home
+goto-last-visible-node      !tree   = Ctrl-End
+beginning-of-buffer         !body   = Ctrl-Home
+end-of-buffer               !body   = Ctrl-End
+## 打开节点查询器（tbd）
+
+# 界面聚焦操作
+focus-to-tree               !body   = Shift-Return
+focus-to-body               !tree   = Shift-Return
+equal-sized-panes                   = Ctrl-Shift-=
+fully-expand-pane                   = Ctrl-l
+
+# 脚本编程
+eval                    !body   = Ctrl-e</t>
 <t tx="pimgeek.20180801052841.1">The children of this node determine how Leo looks.</t>
 <t tx="pimgeek.20180801052841.10"></t>
 <t tx="pimgeek.20180801052841.100"></t>
