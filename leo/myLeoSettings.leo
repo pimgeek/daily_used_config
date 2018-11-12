@@ -8,6 +8,8 @@
 <vnodes>
 <v t="pimgeek.20180801052332.1"><vh>Settings README</vh></v>
 <v t="pimgeek.20180801052332.207"><vh>@settings</vh>
+<v t="pimgeek.20181112105223.1"><vh>@bool show-tips = False</vh></v>
+<v t="pimgeek.20181112105146.1"><vh>@string default_leo_file = D:/hintsnet-wudi/develop/github/play/leo/hintsnet-play.leo</vh></v>
 <v t="pimgeek.20180801052841.1"><vh>Appearance (change these first)</vh>
 <v t="pimgeek.20180801052841.2"><vh>Qt Gui settings</vh>
 <v t="pimgeek.20180801052841.3"><vh>Colors</vh>
@@ -330,18 +332,19 @@ free_layout.py
 
 contextmenu.py
     # This is required by the vim.py and xemacs.py plugins.
-leo_to_html.py
+# leo_to_html.py
 # livecode.py
 mod_scripting.py
-nav_qt.py
-nodetags.py
+# nav_qt.py
+# nodetags.py
 quicksearch.py
-python_terminal.py
-screen_capture.py
+# python_terminal.py
+# screen_capture.py
 settings_finder.py
-stickynotes.py
-todo.py
+# stickynotes.py
+# todo.py
 viewrendered.py
+# viewrendered2.py
 
 # Alphabetical list of all Leo plugins.
 
@@ -486,6 +489,7 @@ do-nothing                          = Ctrl-Return
 
 # 通用操作
 focus-to-find                       = Ctrl-h
+find-prev                           = F4
 redo                                = Ctrl-r
 redo                                = Ctrl-y
 
@@ -531,8 +535,9 @@ equal-sized-panes                   = Ctrl-Shift-=
 fully-expand-pane                   = Ctrl-l
 
 # 脚本编程
-eval                    !body   = Ctrl-e</t>
-<t tx="pimgeek.20180801052841.1">The children of this node determine how Leo looks.</t>
+eval                    !body   = Ctrl-e
+execute-script                  = Shift-F5</t>
+<t tx="pimgeek.20180801052841.1"># 利用此节点的叶子节点控制 Leo 的界面样式</t>
 <t tx="pimgeek.20180801052841.10"></t>
 <t tx="pimgeek.20180801052841.100"></t>
 <t tx="pimgeek.20180801052841.101"></t>
@@ -1243,7 +1248,7 @@ Don't change these unless you are aware of the consequences</t>
 <t tx="pimgeek.20180801052841.98"></t>
 <t tx="pimgeek.20180801052841.99"></t>
 <t tx="pimgeek.20181109180843.1"></t>
-<t tx="pimgeek.20181109220325.1"></t>
+<t tx="pimgeek.20181109220325.1"># 利用此节点的叶子节点控制 leo editor 的交互行为</t>
 <t tx="pimgeek.20181109220429.1">True:  enable autocompletion initially.
 False: disable autocomopletion initially.
 
@@ -1254,5 +1259,7 @@ Note: The 'initially' prefix is needed to distinguish this setting from
 enable-autocompleter command. Otherwised they would get 'munged' to the same
 configuration value.</t>
 <t tx="pimgeek.20181109220448.1"></t>
+<t tx="pimgeek.20181112105146.1"># 启动时默认打开这个文件</t>
+<t tx="pimgeek.20181112105223.1"># 启动时不再显示使用小技巧</t>
 </tnodes>
 </leo_file>
