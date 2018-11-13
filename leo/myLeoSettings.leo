@@ -296,11 +296,16 @@
 </v>
 <v t="pimgeek.20181109220325.1"><vh>Behaviors</vh>
 <v t="pimgeek.20181109220429.1"><vh>@bool enable_autocompleter_initially = True</vh></v>
-<v t="pimgeek.20181109220448.1"><vh>@bool enable_calltips_initially = True</vh></v>
-</v>
+<v t="pimgeek.20181113172228.1"><vh>@int tab_width = 2</vh></v>
 <v t="pimgeek.20180801052332.208"><vh>@enabled-plugins</vh></v>
+<v t="pimgeek.20181112171326.1"><vh>@commands</vh>
+<v t="pimgeek.20181112173226.1"><vh>viewrendered control</vh>
+<v t="pimgeek.20181112171341.1"><vh>@command toggle-vr-pane</vh></v>
+</v>
+</v>
 <v t="pimgeek.20180801052332.209"><vh>@keys</vh>
 <v t="pimgeek.20180801052332.210"><vh>@shortcuts</vh></v>
+</v>
 </v>
 </v>
 </vnodes>
@@ -486,6 +491,7 @@ do-nothing                          = Ctrl-h
 do-nothing                          = Ctrl-l
 do-nothing                          = Ctrl-Ins
 do-nothing                          = Ctrl-Return
+do-nothing                          = Alt-0
 
 # 通用操作
 focus-to-find                       = Ctrl-h
@@ -535,8 +541,9 @@ equal-sized-panes                   = Ctrl-Shift-=
 fully-expand-pane                   = Ctrl-l
 
 # 脚本编程
-eval                    !body   = Ctrl-e
-execute-script                  = Shift-F5</t>
+eval                        !body   = Ctrl-e
+execute-script                      = Shift-F5
+toggle-vr-pane                      = Alt-v</t>
 <t tx="pimgeek.20180801052841.1"># 利用此节点的叶子节点控制 Leo 的界面样式</t>
 <t tx="pimgeek.20180801052841.10"></t>
 <t tx="pimgeek.20180801052841.100"></t>
@@ -1258,8 +1265,46 @@ commands to enable or disable autocompletion at any time.
 Note: The 'initially' prefix is needed to distinguish this setting from
 enable-autocompleter command. Otherwised they would get 'munged' to the same
 configuration value.</t>
-<t tx="pimgeek.20181109220448.1"></t>
 <t tx="pimgeek.20181112105146.1"># 启动时默认打开这个文件</t>
 <t tx="pimgeek.20181112105223.1"># 启动时不再显示使用小技巧</t>
+<t tx="pimgeek.20181112171326.1"></t>
+<t tx="pimgeek.20181112171341.1">@first # -*- coding: utf-8 -*-
+@language python
+
+'''
+利用 toggle-vr-pane 命令显示/隐藏预览窗格。
+'''
+
+# 获取当前的 leo 文件名（小写）
+this_filename = c.fileName().lower()
+
+# 获取 vr 窗格对象
+vr = g.app.pluginsController.loadedModules['leo.plugins.viewrendered'].controllers[this_filename]
+
+curr_vr_width = vr.width()
+curr_vr_height = vr.height()
+
+if (curr_vr_width &gt; 0 and curr_vr_height &gt; 0):
+    # 只有当预览窗格肉眼可见时，才进行隐藏
+    g.app.vr_width = curr_vr_width
+    g.app.vr_height = curr_vr_height
+    vr.change_size(-curr_vr_width)
+    vr.change_size(-curr_vr_height)
+else:
+    if (hasattr(g.app, 'vr_width') and hasattr(g.app, 'vr_height')):
+        if (curr_vr_width == 0):
+            # 如果是左右隐藏，只需还原宽度
+            vr.change_size(g.app.vr_width)
+        elif (curr_vr_height == 0):
+            # 如果是上下隐藏，只需还原高度
+            vr.change_size(g.app.vr_height)
+    else:
+        # 如果原尺寸丢失了，就还原到默认值 500
+        vr.change_size(500)</t>
+<t tx="pimgeek.20181112173226.1"># 预览窗格操作</t>
+<t tx="pimgeek.20181113172228.1">@language md
+
+- tab_width =  2 表示 TAB 宽度为 2，并且使用真实的 TAB 字符
+- tab_width = -2 表示 TAB 宽度为 2，并且用空格代替 TAB 字符</t>
 </tnodes>
 </leo_file>
