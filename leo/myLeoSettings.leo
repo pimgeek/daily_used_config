@@ -9,7 +9,7 @@
 <v t="pimgeek.20180801052332.1"><vh>Settings README</vh></v>
 <v t="pimgeek.20180801052332.207"><vh>@settings</vh>
 <v t="pimgeek.20181112105223.1"><vh>@bool show-tips = False</vh></v>
-<v t="pimgeek.20181112105146.1"><vh>@string default_leo_file = D:/hintsnet-wudi/develop/github/play/leo/hintsnet-play.leo</vh></v>
+<v t="pimgeek.20181112105146.1"><vh>@string default_leo_file = ~/.leo/myLeoSettings.leo</vh></v>
 <v t="pimgeek.20180801052841.1"><vh>Appearance (change these first)</vh>
 <v t="pimgeek.20180801052841.2"><vh>Qt Gui settings</vh>
 <v t="pimgeek.20180801052841.3"><vh>Colors</vh>
@@ -110,10 +110,10 @@
 </v>
 <v t="pimgeek.20180801052841.79"><vh>Fonts</vh>
 <v t="pimgeek.20180801052841.80"><vh>Basic Fonts (change these first)</vh>
-<v t="pimgeek.20180801052841.81"><vh>@string font-family = 等距更纱黑体 T SC</vh></v>
-<v t="pimgeek.20180801052841.82"><vh>@string font-size = 12pt</vh></v>
-<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 10pt</vh></v>
-<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 9pt</vh></v>
+<v t="pimgeek.20180801052841.81"><vh>@string font-family = 等距更纱黑体 T SC,Monaco</vh></v>
+<v t="pimgeek.20180801052841.82"><vh>@string font-size = 18px</vh></v>
+<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 15px</vh></v>
+<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 13px</vh></v>
 <v t="pimgeek.20180801052841.85"><vh>@string font-style = normal</vh></v>
 <v t="pimgeek.20180801052841.86"><vh>@string font-weight = normal</vh></v>
 </v>
@@ -501,6 +501,7 @@ redo                                = Ctrl-y
 
 # 基础节点操作
 edit-headline               !tree   = F2
+abort-edit-headline         !tree   = Esc
 insert-node                 !tree   = Return
 insert-child                !tree   = Ctrl-Return
 move-outline-right          !tree   = Tab
