@@ -8,6 +8,7 @@
 <vnodes>
 <v t="pimgeek.20180801052332.1"><vh>Settings README</vh></v>
 <v t="pimgeek.20180801052332.207"><vh>@settings</vh>
+<v t="pimgeek.20181116104307.1"><vh>@bool scripting-at-script-nodes = False</vh></v>
 <v t="pimgeek.20181112105223.1"><vh>@bool show-tips = False</vh></v>
 <v t="pimgeek.20181112105146.1"><vh>@string default_leo_file = ~/.leo/myLeoSettings.leo</vh></v>
 <v t="pimgeek.20180801052841.1"><vh>Appearance (change these first)</vh>
@@ -111,9 +112,9 @@
 <v t="pimgeek.20180801052841.79"><vh>Fonts</vh>
 <v t="pimgeek.20180801052841.80"><vh>Basic Fonts (change these first)</vh>
 <v t="pimgeek.20180801052841.81"><vh>@string font-family = 等距更纱黑体 T SC,Monaco</vh></v>
-<v t="pimgeek.20180801052841.82"><vh>@string font-size = 18px</vh></v>
-<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 15px</vh></v>
-<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 13px</vh></v>
+<v t="pimgeek.20180801052841.82"><vh>@string font-size = 20px</vh></v>
+<v t="pimgeek.20180801052841.83"><vh>@string medium-font-size = 18px</vh></v>
+<v t="pimgeek.20180801052841.84"><vh>@string small-font-size = 15px</vh></v>
 <v t="pimgeek.20180801052841.85"><vh>@string font-style = normal</vh></v>
 <v t="pimgeek.20180801052841.86"><vh>@string font-weight = normal</vh></v>
 </v>
@@ -297,6 +298,7 @@
 <v t="pimgeek.20181109220325.1"><vh>Behaviors</vh>
 <v t="pimgeek.20181109220429.1"><vh>@bool enable_autocompleter_initially = True</vh></v>
 <v t="pimgeek.20181113172228.1"><vh>@int tab_width = 2</vh></v>
+<v t="pimgeek.20181114231400.1"><vh>@string target_language = md</vh></v>
 <v t="pimgeek.20180801052332.208"><vh>@enabled-plugins</vh></v>
 <v t="pimgeek.20181112171326.1"><vh>@commands</vh>
 <v t="pimgeek.20181112173226.1"><vh>viewrendered control</vh>
@@ -494,6 +496,7 @@ do-nothing                          = Ctrl-Return
 do-nothing                          = Alt-0
 
 # 通用操作
+close-window                        = Ctrl-w
 focus-to-find                       = Ctrl-h
 find-prev                           = F4
 redo                                = Ctrl-r
@@ -1307,5 +1310,9 @@ else:
 
 - tab_width =  2 表示 TAB 宽度为 2，并且使用真实的 TAB 字符
 - tab_width = -2 表示 TAB 宽度为 2，并且用空格代替 TAB 字符</t>
+<t tx="pimgeek.20181114231400.1">若无 @language 或 @comment 修饰，编辑器默认选择 markdown 语法进行高亮处理
+
+所有合法有效的取值，可参考 g.app.extension_dict</t>
+<t tx="pimgeek.20181116104307.1">如果设置为 True，则所有带有 @script 的节点都会在 Leo Editor 启动时立刻执行。</t>
 </tnodes>
 </leo_file>
